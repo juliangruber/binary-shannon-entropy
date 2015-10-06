@@ -3,15 +3,17 @@ module.exports = shannon;
 function shannon(buf){
   var H = 0;
   var count = buf.length;
-
   var keys = [];
   var C = {};
+  var val;
+
   for (var i = 0; i < count; i++) {
-    if (keys.indexOf(buf[i]) == -1) {
-      keys.push(buf[i]);
-      C[buf[i]] = 1;
+    val = buf[i];
+    if (keys.indexOf(val) == -1) {
+      keys.push(val);
+      C[val] = 1;
     } else {
-      C[buf[i]]++;
+      C[val]++;
     }
   }
 

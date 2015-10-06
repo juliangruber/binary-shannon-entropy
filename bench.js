@@ -1,6 +1,6 @@
 var calc = require('./');
 
-var b = Buffer(15 * 1024 * 1024);
+var b = Buffer(30 * 1024 * 1024);
 b.fill('a');
 var lines = Math.ceil(b.length / 16);
 
