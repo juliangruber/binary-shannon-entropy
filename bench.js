@@ -8,10 +8,9 @@ var dt = 0;
 
 for (var i = 0; i < lines; i++) {
   var offset = i * 16;
-  var slice = b.slice(offset, offset + 16);
 
   var start = new Date;
-  var entropy = calc(slice);
+  var entropy = calc(b, offset, offset + 16);
   dt += (new Date) - start;
 }
 

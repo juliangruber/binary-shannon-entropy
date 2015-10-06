@@ -1,13 +1,15 @@
 module.exports = shannon;
 
-function shannon(buf){
+function shannon(buf, start, end){
   var H = 0;
-  var count = buf.length;
+  start = start || 0;
+  end = end || buf.length;
+  var count = end - start;
   var keys = [];
   var C = {};
   var val;
 
-  for (var i = 0; i < count; i++) {
+  for (var i = start; i < end; i++) {
     val = buf[i];
     if (keys.indexOf(val) == -1) {
       keys.push(val);

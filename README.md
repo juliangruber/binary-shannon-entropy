@@ -24,9 +24,11 @@ $ npm install binary-shannon-entropy
 
 ## API
 
-### calc(buf)
+### calc(buf[, start][, end])
 
   Return a number between `0` and `8`, giving the Shannon entropy to the base of 2.
+
+  Optionally limit the area in the buffer to inspect by `start` and `end`.
 
 ## Algorithm
 
