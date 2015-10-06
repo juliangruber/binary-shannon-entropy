@@ -4,11 +4,16 @@ function shannon(buf){
   var H = 0;
   var count = buf.length;
 
+  var keys = [];
   var C = {};
   for (var i = 0; i < count; i++) {
-    C[buf[i]] = (C[buf[i]] || 0) + 1;
+    if (keys.indexOf(buf[i]) == -1) {
+      keys.push(buf[i]);
+      C[buf[i]] = 1;
+    } else {
+      C[buf[i]]++;
+    }
   }
-  var keys = Object.keys(C);
 
   for (var i = 0; i < keys.length; i++) {
     var Pi = C[keys[i]] / count;
