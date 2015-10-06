@@ -3,6 +3,8 @@
 
   Calculate the [shannon entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) of a buffer.
 
+  [![build status](https://secure.travis-ci.org/juliangruber/binary-shannon-entropy.svg)](http://travis-ci.org/juliangruber/binary-shannon-entropy)
+
 ## Example
 
 ```js
