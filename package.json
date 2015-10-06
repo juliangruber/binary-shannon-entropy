@@ -1,6 +1,6 @@
 {
   "name": "binary-shannon-entropy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Calculate the shannon entropy of a buffer",
   "scripts": {
     "test": "make test"
