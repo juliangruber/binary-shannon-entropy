@@ -6,7 +6,7 @@ function shannon(buf, start, end){
   end = end || buf.length;
   var count = end - start;
   var keys = [];
-  var C = {};
+  var C = [];
   var val;
 
   for (var i = start; i < end; i++) {
