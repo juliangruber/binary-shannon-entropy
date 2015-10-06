@@ -3,7 +3,11 @@ module.exports = shannon;
 function shannon(buf){
   var H = 0;
   var count = buf.length;
-  var C = makeC(buf);
+
+  var C = {};
+  for (var i = 0; i < count; i++) {
+    C[buf[i]] = (C[buf[i]] || 0) + 1;
+  }
   var keys = Object.keys(C);
 
   for (var i = 0; i < keys.length; i++) {
@@ -14,15 +18,9 @@ function shannon(buf){
   return -H;
 }
 
-function makeC(buf){
-  var C = {};
-  for (var i = 0; i < buf.length; i++) {
-    C[buf[i]] = (C[buf[i]] || 0) + 1;
-  }
-  return C;
-}
+var logs = {};
 
 function log2(x){
-  return Math.log(x) / Math.LN2;
+  return logs[x] = logs[x] || (Math.log(x) / Math.LN2);
 }
 
