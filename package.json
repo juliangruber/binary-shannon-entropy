@@ -1,0 +1,13 @@
+{
+  "name": "binary-shannon-entropy",
+  "version": "0.0.0",
+  "description": "Calculate the shannon entropy of a buffer",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": "juliangruber/binary-shannon-entropy",
+  "devDependencies": {
+    "tape": "^4.2.1"
+  },
+  "license": "MIT"
+}
