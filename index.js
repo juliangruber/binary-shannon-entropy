@@ -17,7 +17,7 @@ function shannon(buf){
 function makeC(buf){
   var C = {};
   for (var i = 0; i < buf.length; i++) {
-    if (!(buf[i] in C)) {
+    if (typeof buf[i] == 'undefined') {
       C[buf[i]] = 1;
     } else {
       C[buf[i]]++;
