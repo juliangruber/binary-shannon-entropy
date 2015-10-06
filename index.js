@@ -17,11 +17,7 @@ function shannon(buf){
 function makeC(buf){
   var C = {};
   for (var i = 0; i < buf.length; i++) {
-    if (typeof C[buf[i]] == 'undefined') {
-      C[buf[i]] = 1;
-    } else {
-      C[buf[i]]++;
-    }
+    C[buf[i]] = (C[buf[i]] || 0) + 1;
   }
   return C;
 }
