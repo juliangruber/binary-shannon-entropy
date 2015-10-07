@@ -1,7 +1,7 @@
 var calc = require('./');
+var randomBuffer = require('random-buffer');
 
-var b = Buffer(30 * 1024 * 1024);
-b.fill('a');
+var b = randomBuffer(10 * 1024 * 1024);
 var lines = Math.ceil(b.length / 16);
 
 var start = new Date;
