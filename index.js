@@ -4,7 +4,7 @@ function shannon(buf, start, end){
   var H = 0;
   start = start || 0;
   end = end || buf.length;
-  var count = end - start;
+  var onebycount = 1 / (end - start);
   var keys = [];
   var C = {};
   var val;
@@ -13,15 +13,14 @@ function shannon(buf, start, end){
     val = buf[i];
     if (typeof C[val] == 'undefined') {
       keys.push(val);
-      C[val] = 1;
+      C[val] = onebycount;
     } else {
-      C[val]++;
+      C[val] += onebycount;
     }
   }
 
   for (var i = 0; i < keys.length; i++) {
-    var Pi = C[keys[i]] / count;
-    H += Pi * log2(Pi);
+    H += C[keys[i]] * log2(C[keys[i]]);
   }
 
   return -H;
