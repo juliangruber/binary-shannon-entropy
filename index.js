@@ -11,7 +11,7 @@ function shannon(buf, start, end){
 
   for (var i = start; i < end; i++) {
     val = buf[i];
-    if (keys.indexOf(val) == -1) {
+    if (typeof C[val] == 'undefined') {
       keys.push(val);
       C[val] = 1;
     } else {
