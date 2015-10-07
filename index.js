@@ -27,9 +27,7 @@ function shannon(buf, start, end){
   return -H;
 }
 
-var logs = {};
-
 function log2(x){
-  return logs[x] = logs[x] || (Math.log(x) / Math.LN2);
+  return Math.log(x) / Math.LN2;
 }
 
