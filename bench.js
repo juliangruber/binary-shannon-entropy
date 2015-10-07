@@ -1,9 +1,10 @@
 var calc = require('./');
 var randomBuffer = require('random-buffer');
 
-var b = randomBuffer(10 * 1024 * 1024);
+var b = randomBuffer(30 * 1024 * 1024);
 var lines = Math.ceil(b.length / 16);
 
+console.log('GO!');
 var start = new Date;
 
 for (var i = 0; i < lines; i++) {
