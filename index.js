@@ -20,13 +20,11 @@ function shannon(buf, start, end){
   }
 
   for (var i = 0; i < keys.length; i++) {
-    H += C[keys[i]] * log2(C[keys[i]]);
+    H += C[keys[i]] * Math.log(C[keys[i]]);
   }
+
+  // log2(x) = Math.log(x) / Math.LN2
+  H /= Math.LN2;
 
   return -H;
 }
-
-function log2(x){
-  return Math.log(x) / Math.LN2;
-}
-
